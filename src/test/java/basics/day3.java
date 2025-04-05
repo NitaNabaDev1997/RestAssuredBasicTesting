@@ -35,7 +35,7 @@ public class day3 {
         .when()
                 .get("https://www.google.com/")
         .then()
-                .cookies("AEC","AVcja2c-jA-hXvheftrwV-IfcHfXP5ddCw9U1Xs05JmgBxKZ1lrNTlmxLw")
+                .cookies("AEC","AVcja2freM3rGemNDT7aiImMVOVOE4Y7uEpd4o7Wj7OiL4zpnd2aG5rjpQ")
                 .log().all();
     }
 
@@ -57,7 +57,7 @@ public class day3 {
 
         for(String k:cookies.keySet())
         {
-            String cookie_value=res.cookie(k);
+            String cookie_value=res.getCookie(k);
             System.out.println(k+"         "+cookie_value);
         }
     }
